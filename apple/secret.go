@@ -46,6 +46,8 @@ type AuthKey struct {
 
 // GenerateClientSecret generates the client_secret used to make request to
 // the Sign in with Apple REST API. A client_secret expires after 6 months.
+//
+// Ref: https://developer.apple.com/documentation/AccountOrganizationalDataSharing/creating-a-client-secret
 func GenerateClientSecret(authKey AuthKey) (string, error) {
 	block, _ := pem.Decode([]byte(authKey.SigningKey))
 	if block == nil {

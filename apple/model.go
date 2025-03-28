@@ -30,3 +30,31 @@ type TokenResponse struct {
 	Error            string `json:"error"`
 	ErrorDescription string `json:"error_description"` // More detailed precision about the current error.
 }
+
+type RevokeResponse struct {
+	// A string that describes the reason for the unsuccessful request.
+	// The string consists of a single allowed value.
+	//
+	// Possible Values:
+	// 	invalid_request, invalid_client, invalid_grant, unauthorized_client, unsupported_grant_type, invalid_scope
+	Error            string `json:"error"`
+	ErrorDescription string `json:"error_description"` // More detailed precision about the current error.
+}
+
+type GenerateTransferSubResponse struct {
+	// TransferSub is the transfer identifier for the user that you send to the recipient team
+	TransferSub string `json:"transfer_sub"`
+}
+
+type ExchangeIdentifierResponse struct {
+	// Sub is the recipient team-scoped identifier for the user.
+	// This value is the same as the sub in the ID token issued during user sign-in.
+	Sub string `json:"sub"`
+
+	// Email is the private email address specific to the recipient team.
+	// This attribute returns only if the user utilized a private email address with the transferred application.
+	Email string `json:"email"`
+
+	// IsPrivateEmail specifies if the email address provided is the private mail relay address.
+	IsPrivateEmail bool `json:"is_private_email"`
+}
