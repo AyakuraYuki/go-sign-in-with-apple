@@ -37,8 +37,7 @@ YOUR_P8_PRIVATE_KEY
 		authKey.ClientID,
 		clientSecret,
 		"the_authorization_code_to_validate",
-		"https://example.com/landing-page",
-	)
+		"https://example.com/landing-page")
 	if err != nil {
 		log.Fatalf("Error validating: %v", err)
 	}

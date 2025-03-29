@@ -36,8 +36,7 @@ YOUR_P8_PRIVATE_KEY
 		context.Background(),
 		authKey.ClientID,
 		clientSecret,
-		"the_refresh_code_to_validate",
-	)
+		"the_refresh_code_to_validate")
 	if err != nil {
 		log.Fatalf("Error validating: %v", err)
 	}

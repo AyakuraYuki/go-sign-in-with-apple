@@ -36,8 +36,7 @@ YOUR_P8_PRIVATE_KEY
 		context.Background(),
 		authKey.ClientID,
 		clientSecret,
-		"the_access_token_to_revoke",
-	)
+		"the_access_token_to_revoke")
 	if err != nil {
 		log.Fatalf("Error validating: %v", err)
 	}
