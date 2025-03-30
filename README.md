@@ -2,7 +2,7 @@
 
 ![](https://img.shields.io/badge/golang-1.24-blue.svg?style=flat)
 
-A library for integrate the Sign in with Apple feature in server-side.
+A library for integrating the Sign in with Apple feature in server-side.
 
 > Ref: https://developer.apple.com/documentation/signinwithapplerestapi
 
